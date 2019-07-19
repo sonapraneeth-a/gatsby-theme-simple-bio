@@ -1,0 +1,43 @@
+{
+  "name": "demo",
+  "version": "0.1.0",
+  "private": true,
+  "main": "index.js",
+  "author": "Sona Praneeth Akula <sonapraneeth.akula@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sonapraneeth-a/gatsby-theme-simple-bio.git"
+  },
+  "homepage": "https://sonapraneeth-a.github.io/gatsby-theme-simple-bio/",
+  "license": "MIT",
+  "scripts": {
+    "develop": "DEBUG=gatsby-theme-simple-bio:* gatsby develop",
+    "dw": "set DEBUG=gatsby-theme-simple-bio:* && gatsby develop",
+    "build": "gatsby build",
+    "build-prefix": "gatsby build --prefix-paths",
+    "clean": "gatsby clean",
+    "prettier": "prettier --write src/**/*.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d public"
+  },
+  "dependencies": {
+    "gatsby": "^2.13.28",
+    "gatsby-theme-simple-bio": "^0.1.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "devDependencies": {
+    "commitizen": "^3.1.2",
+    "cz-customizable": "^6.2.0",
+    "eslint": "^6.0.1",
+    "eslint-config-google": "^0.13.0",
+    "eslint-loader": "^2.2.1",
+    "eslint-plugin-react": "^7.14.2",
+    "gatsby-plugin-eslint": "^2.0.5",
+    "husky": "^3.0.0",
+    "lint-staged": "^9.2.0",
+    "precise-commits": "^1.0.2",
+    "prettier": "^1.18.2",
+    "pretty-quick": "^1.11.1"
+  }
+}

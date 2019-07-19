@@ -1,0 +1,15 @@
+{
+  "name": "gatsby-theme-simple-bio--guide",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "docz:dev": "docz dev",
+    "docz:build": "docz build"
+  },
+  "devDependencies": {
+    "docz": "^2.0.0-rc.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
+}

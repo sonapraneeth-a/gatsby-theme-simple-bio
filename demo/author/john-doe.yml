@@ -1,0 +1,20 @@
+# Author info
+name: John Doe
+description: A passionate web designer
+cover: ../content/assets/profile.png
+username:
+  linkedin: john-doe
+  github: john-doe
+  facebook: john.doe
+  twitter: john_doe
+  email: john_doe@mail.com
+positions:
+  - title: Position 1
+    company: XYZ Company
+    duration: July YYYY - Present
+  - title: Degree 2
+    company: DEF University
+    duration: YYYY - YYYY
+  - title: Degree 1
+    company: ABC University
+    duration: YYYY - YYYY

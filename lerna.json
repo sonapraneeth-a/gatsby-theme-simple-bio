@@ -1,0 +1,38 @@
+{
+  "packages": [
+    "gatsby-theme-simple-bio"
+  ],
+  "version": "independent",
+  "loglevel": "verbose",
+  "registry": "https://registry.npmjs.org/",
+  "useWorkspaces": true,
+  "npmClient": "yarn",
+  "command": {
+    "bootstrap": {
+      "ignore": "component-*",
+      "npmClientArgs": ["--no-package-lock"]
+    },
+    "publish": {
+      "ignoreChanges": [".*", "*.md"],
+      "message": "chore(release): Publish",
+      "registry": "https://registry.npmjs.org/"
+    },
+    "version": {
+      "ignoreChanges": [".*", "*.md"],
+      "allowBranch": ["master"],
+      "message": "chore(release): Publish"
+    },
+    "changed": {
+      "ignoreChanges": [".*", "*.md"],
+      "allowBranch": ["master"]
+    },
+    "run": {
+      "npmClient": "yarn"
+    }
+  },
+  "ignoreChanges": [
+    "*.md",
+    "**/*.md",
+    ".*"
+  ]
+}

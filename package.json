@@ -1,0 +1,25 @@
+{
+  "name": "gatsby-theme-workspaces",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "author": "Sona Praneeth Akula <sonapraneeth.akula@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "changed": "lerna changed --json --all --toposort",
+    "clean": "yarn workspace demo clean",
+    "dev": "yarn workspace demo develop",
+    "devw": "yarn workspace demo dw",
+    "lc": "lerna clean",
+    "lp": "lerna list --json --all --toposort",
+    "new-pre-release-version": "lerna version prerelease --conventional-commits",
+    "new-version": "lerna version --conventional-commits"
+  },
+  "workspaces": [
+    "gatsby-theme-simple-bio",
+    "demo"
+  ],
+  "devDependencies": {
+    "lerna": "^3.16.0"
+  }
+}

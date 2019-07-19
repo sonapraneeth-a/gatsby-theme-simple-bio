@@ -1,0 +1,21 @@
+# TODOs
+
+- [-] Design an icon for the theme
+- [-] Create an image for profile
+- [ ] Add tests for theme
+- [ ] Check if moment library can be removed (site-footer main usage)
+- [ ] Add font awesome icon to page layout (currently not working as expected)
+- [ ] Options
+  - [x] rounded: Make the profile image rounded
+  - [ ] debug: Add debugging statements
+- [ ] Add support for Theme UI
+  - [-] borderBottomColor for <a> (https://github.com/system-ui/theme-ui/issues/{75/81})
+  - [x] Colors for social icons in dark and light modes
+  - [ ] Use built-in theme layouts (Layout, Flex, ...)
+  - [-] Test if breakpoints are working with theme-ui
+  - [ ] Updated meta theme_color
+  - [ ] Theme styling migration
+    - [ ] Grid
+    - [ ] Gatsby image
+    - [ ] Root -> ThemeToggleWrapper
+    - [ ] Home layout
