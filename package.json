@@ -9,6 +9,8 @@
     "changed": "lerna changed --json --all --toposort",
     "clean": "yarn workspace demo clean",
     "dev": "yarn workspace demo develop",
+    "build": "yarn workspace demo build",
+    "buildp": "yarn workspace demo build-prefix",
     "devw": "yarn workspace demo dw",
     "lc": "lerna clean",
     "lp": "lerna list --json --all --toposort",
