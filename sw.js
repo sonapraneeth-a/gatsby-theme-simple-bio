@@ -26,37 +26,37 @@ workbox.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-dafd579b38edc8faec1d.js"
+    "url": "webpack-runtime-5a3803f215e584559ac7.js"
   },
   {
-    "url": "styles.1f4ba2d8c5dc419cda4d.css"
+    "url": "styles.26564388e538fda965af.css"
   },
   {
     "url": "styles-53dc9a5ebf2bd73ebf11.js"
   },
   {
-    "url": "app-cee699bc2212e3770fa5.js"
+    "url": "app-6318ec04689e5e80d91b.js"
   },
   {
     "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-bcf42f0a516ae76618f3.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "6728f7dbd9096548d85f54127860fbbe"
+    "revision": "e3e1ebc14c4e34d03574ec0c5c32bedd"
   },
   {
-    "url": "component---src-pages-404-js-ec01213d7b77b1116a29.js"
+    "url": "component---src-pages-404-js-ffc27e29e2bf788bc341.js"
   },
   {
     "url": "0-181bf0ba4703f5fb8184.js"
   },
   {
     "url": "page-data/404.html/page-data.json",
-    "revision": "627bce8cee2af1a73563cb0ed8f2f7d7"
+    "revision": "9705496b99e9bdba54b85bca713185d5"
   },
   {
     "url": "page-data/offline-plugin-app-shell-fallback/page-data.json",
-    "revision": "bb4dcfcc24bd0bf986e88c33266d2615"
+    "revision": "6ac5da9b686806ac028dd92af7c9ae6a"
   },
   {
     "url": "manifest.webmanifest",
@@ -82,7 +82,7 @@ const navigationRoute = new workbox.routing.NavigationRoute(({ event }) => {
   return idbKeyval.get(WHITELIST_KEY).then((customWhitelist = []) => {
     // Respond with the offline shell if we match the custom whitelist
     if (customWhitelist.includes(pathname)) {
-      const offlineShell = `/offline-plugin-app-shell-fallback/index.html`
+      const offlineShell = `/gatsby-theme-simple-bio/offline-plugin-app-shell-fallback/index.html`
       const cacheName = workbox.core.cacheNames.precache
 
       return caches.match(offlineShell, { cacheName }).then(cachedResponse => {
@@ -154,7 +154,7 @@ const messageApi = {
 
     pathnames = pathnames.map(({ pathname, includesPrefix }) => {
       if (!includesPrefix) {
-        return `${pathname}`
+        return `/gatsby-theme-simple-bio${pathname}`
       } else {
         return pathname
       }
