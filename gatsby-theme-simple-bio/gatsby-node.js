@@ -83,9 +83,8 @@ exports.sourceNodes = ({actions, schema}) => {
 
 // 4. Query for events and create pages
 exports.createPages = async ({actions, graphql, reporter}, themeOptions) => {
-  const basePath = options.basePath;
   actions.createPage({
-    path: basePath,
+    path: "/",
     component: require.resolve("./src/templates/home.js"),
   });
 };
