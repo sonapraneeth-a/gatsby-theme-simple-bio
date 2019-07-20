@@ -43,7 +43,7 @@ module.exports = (themeOptions) => {
       },
     },
     plugins: [
-      {
+      /* {
         resolve: "gatsby-plugin-eslint",
         options: {
           test: /\.js$|\.jsx$/,
@@ -54,7 +54,7 @@ module.exports = (themeOptions) => {
             failOnError: false,
           },
         },
-      },
+      },*/
       {
         resolve: "gatsby-source-filesystem",
         options: {
