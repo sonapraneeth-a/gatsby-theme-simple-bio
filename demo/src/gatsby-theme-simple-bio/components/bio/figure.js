@@ -1,8 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
 import PropTypes from "prop-types";
-/** @jsx jsx */
-import {jsx} from "@emotion/core";
 
 import profileImage from "../../../../content/assets/profile.svg";
 import {useOptions} from "gatsby-theme-simple-bio/src/hooks/useOptions";
@@ -23,6 +21,7 @@ FigureBio.defaultProps = {
 function FigureBio({image, caption}) {
   const options = useOptions();
   const borderRadius = options.rounded === false ? "0%" : "50%";
+  console.log(options.rounded);
   return (
     <>
       {/* TODO: Fix this for rounded option */}
@@ -30,13 +29,9 @@ function FigureBio({image, caption}) {
         src={profileImage}
         alt={"Profile image of John Doe"}
         style={{
-          borderRadius: borderRadius,
-          // border: "0.1rem solid black",
+          color: "red",
+          borderRadius: `${borderRadius}`,
         }}
-        imgStyle={{
-          borderRadius: `${borderRadius} !important`,
-        }}
-        caption={caption}
       />
     </>
   );
