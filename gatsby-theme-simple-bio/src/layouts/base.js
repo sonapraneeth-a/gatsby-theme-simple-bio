@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import styled from "@emotion/styled";
 
 import HeadMetadata from "../components/head/meta";
+import Container from "../components/grid/container";
 import Navbar from "../components/navbar";
 import SiteFooter from "../components/site-footer";
 
@@ -21,8 +22,6 @@ const MainContent = styled.main`
   flex-direction: column;
   top: 5rem;
   position: relative;
-  width: 90%;
-  margin: 0 auto;
   margin-bottom: 5rem;
 `;
 
@@ -39,7 +38,11 @@ function BaseLayout({title, description, location, children}) {
       />
       <Content>
         <Navbar />
-        <MainContent>{children}</MainContent>
+        <MainContent>
+          <Container>
+            {children}
+          </Container>
+        </MainContent>
         <SiteFooter />
       </Content>
     </>
