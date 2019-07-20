@@ -2,6 +2,7 @@
 import {jsx} from "theme-ui";
 import {Styled} from "theme-ui";
 
+import {useSiteMetadata} from "../hooks/queries/useSiteMetadata";
 import Container from "./grid/container";
 
 /**
@@ -9,6 +10,8 @@ import Container from "./grid/container";
  * @return {JSX}
  */
 function Navbar() {
+  const siteMeta = useSiteMetadata();
+  const author = siteMeta.author;
   return (
     <nav
       role="navigation"
@@ -24,7 +27,7 @@ function Navbar() {
       }}
     >
       <Container>
-        <Styled.h1>Demo</Styled.h1>
+        <Styled.h1>{author}</Styled.h1>
       </Container>
     </nav>
   );
