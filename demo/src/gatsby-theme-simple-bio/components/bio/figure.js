@@ -21,15 +21,13 @@ FigureBio.defaultProps = {
 function FigureBio({image, caption}) {
   const options = useOptions();
   const borderRadius = options.rounded === false ? "0%" : "50%";
-  console.log(options.rounded);
   return (
     <>
       {/* TODO: Fix this for rounded option */}
       <img
         src={profileImage}
-        alt={"Profile image of John Doe"}
+        alt={"This is how John Doe looks"}
         style={{
-          color: "red",
           borderRadius: `${borderRadius}`,
         }}
       />
