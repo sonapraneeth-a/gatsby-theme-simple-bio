@@ -4,22 +4,23 @@ module.exports = (themeOptions) => {
   console.log(`Environment: ${process.env.NODE_ENV}`);
   // Default options to be used in theme
   const defaultOptions = {
-    //
-    basePath: "/",
-    //
+    baseUrl: "/", // Default: "/"
+    // Paths for folders
     paths: {
-      assets: "assets",
-      home: "content",
+      // Directory path for images
+      assets: "content/assets", // Default: "content/assets"
+      // Directory path for MDX home page content
+      home: "content/home", // Default: "content/home"
     },
     // Should the theme have rounded components
-    rounded: false,
+    rounded: false, // Default: false
   };
   // Options created using default and provided options
   const options = merge({}, defaultOptions, themeOptions);
   console.log(
     `Theme options from gatsby-config: ${JSON.stringify(options, null, 2)}`,
   );
-  let serviceWorkerUrl = options.basePath;
+  let serviceWorkerUrl = options.baseUrl;
   serviceWorkerUrl = serviceWorkerUrl.replace(/\/?$/, "/");
   console.log(`Service worker URL: ${serviceWorkerUrl}`);
 
