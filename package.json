@@ -15,7 +15,8 @@
     "lc": "lerna clean",
     "lp": "lerna list --json --all --toposort",
     "new-pre-release-version": "lerna version prerelease --conventional-commits",
-    "new-version": "lerna version --conventional-commits"
+    "new-version": "lerna version --conventional-commits",
+    "pub": "lerna publish"
   },
   "workspaces": [
     "gatsby-theme-simple-bio",
