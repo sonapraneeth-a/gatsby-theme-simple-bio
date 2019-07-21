@@ -3,18 +3,20 @@ const merge = require("lodash.merge");
 
 // Default options to be used in theme
 const defaultOptions = {
-  // Base URL from where the project is loaded
-  basePath: "/",
-  // Paths for the files
+  baseUrl: "/", // Default: "/"
+  // Paths for folders
   paths: {
-    // Path for assets/images
-    assets: "assets",
-    // Path for home page content files
-    home: "content",
+    // Directory path for images
+    assets: "content/assets", // Default: "content/assets"
+    // Directory path for MDX home page content
+    home: "content/home", // Default: "content/home"
   },
+  // Should the theme have rounded components
+  rounded: false, // Default: false
 };
 
 let options;
+let baseUrl;
 let assetsDirPath;
 let homeDirPath;
 
@@ -23,6 +25,7 @@ exports.onPreBootstrap = ({reporter}, themeOptions) => {
   // Options created using default and provided options
   options = merge({}, defaultOptions, themeOptions);
   reporter.info(`Options: ${JSON.stringify(options, null, 2)}`);
+  baseUrl = options.baseUrl;
   assetsDirPath = options.paths.assets;
   homeDirPath = options.paths.home;
 
@@ -38,53 +41,14 @@ exports.onPreBootstrap = ({reporter}, themeOptions) => {
 };
 
 // 2. Define the Author type
-exports.sourceNodes = ({actions, schema}) => {
-  /* actions.createTypes(`
-    type Author implements Node @dontInfer {
-      name: String!,
-      description: String!,
-      cover: ImageSharp!,
-      positions: {
-        title: String!,
-        company: String!,
-        duration: String!
-      }
-    }
-  `);*/
-  const {createTypes} = actions;
-  createTypes(
-    schema.buildObjectType({
-      name: "Author",
-      fields: {
-        id: {type: "ID!"},
-        name: {
-          type: "String!",
-        },
-        description: {
-          type: "String!",
-        },
-        cover: {
-          type: "ImageSharp!",
-        },
-        /* positions: {
-          fields: {
-            title: {
-              type: "String!",
-            },
-          },
-        }*/
-      },
-      interfaces: ["Node"],
-    }),
-  );
-};
 
 // 3. Define resolvers for any custom fields
 
 // 4. Query for events and create pages
 exports.createPages = async ({actions, graphql, reporter}, themeOptions) => {
+  reporter.info(`Creating page at ${baseUrl}`);
   actions.createPage({
-    path: "/",
+    path: baseUrl,
     component: require.resolve("./src/templates/home.js"),
   });
 };
