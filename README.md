@@ -1,83 +1,65 @@
-# Gatsby Theme  - Simple Bio
+<p align="center">
+  <a href="https://gatsbyjs.org">
+    <img alt="Gatsby" src="https://sonapraneeth-a.github.io/gatsby-theme-simple-bio/icons/icon-512x512.png" width="60" />
+  </a>
+</p>
+<h1 align="center">
+  Gatsby Theme - Simple Bio
+</h1>
 
-See the [live demo](https://sonapraneeth-a.github.io/gatsby-theme-simple-bio/)
+<p align="center">
+  <a href="https://github.com/sonapraneeth-a/gatsby-theme-simple-bio/blob/master/gatsby-theme-simple-bio/LICENSE">
+    <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="Gatsby theme simple bio is released under the MIT license." />
+  </a>
+  <a href="https://www.npmjs.org/package/gatsby-theme-simple-bio">
+    <img src="https://img.shields.io/npm/v/gatsby-theme-simple-bio.svg" alt="Current npm package version." />
+  </a>
+  <a href="https://npmcharts.com/compare/gatsby-theme-simple-bio?minimal=true">
+    <img src="https://img.shields.io/npm/dm/gatsby-theme-simple-bio.svg" alt="Downloads per month on npm." />
+  </a>
+  <a href="https://npmcharts.com/compare/gatsby-theme-simple-bio?minimal=true">
+    <img src="https://img.shields.io/npm/dt/gatsby-theme-simple-bio.svg" alt="Total downloads on npm." />
+  </a>
+</p>
 
-## Installation
+This theme is developed using ```gatsby```. One can use this theme for having a website with brief introduction and social profiles.
 
-To use this theme in your Gatsby sites, follow these instructions:
+## Directory structure
 
-1.  Install the theme
+- ```demo```: Contains demo for the theme (To be used with yarn workspaces)
+- ```gatsby-theme-simple-bio```: Theme's code folder
+- ```starter```: Starter using the theme
+
+Theme's documentation is available in https://github.com/sonapraneeth-a/gatsby-theme-simple-bio/blob/master/gatsby-theme-simple-bio/README.md
+
+## How to use this repo
+
+- While developing theme
+  - Get the theme set up locally.
+  ```sh
+  git clone https://github.com/sonapraneeth-a/gatsby-theme-simple-bio.git
+  cd gatsby-theme-simple-bio
+  yarn install
+  ```
+
+  - Start the demo site.
     ```sh
-    npm install --save gatsby-theme-simple-bio
+    yarn develop
     ```
 
-2.  Add the theme to your `gatsby-config.js`:
-    ```js
-    module.exports = {
-      plugins: [
-        {
-          resolve: 'gatsby-theme-simple-bio',
-          options: {
-            // See Options section for more details
-          }
-        }
-      ]
-    }
-    ```
+    The demo will start at http://localhost:8000
 
-3.  Start your site
-    ```sh
-    gatsby develop
-    ```
+    **NOTE:** If you’re new to Yarn workspaces, check out [this post](https://www.gatsbyjs.org/blog/2019-05-22-setting-up-yarn-workspaces-for-theme-development/) for details.
 
-## Options
+- As a starter
+  - Get the starter set up locally.
+  ```sh
+  git clone https://github.com/sonapraneeth-a/gatsby-theme-simple-bio.git
+  cd gatsby-theme-simple-bio/starter
+  npm install
+  ```
 
-Below are the options available for the theme
-
-```js
-// Should a default manifest be included
-manifest: true, // Default: true
-// Paths for folders
-paths: {
-  // Directory path for images
-  assets: "content/assets", // Default: "content/assets"
-  // Directory path for MDX home page content
-  home: "content/home", // Default: "content/home"
-},
-// Should the theme have rounded components
-rounded: false, // Default: false
-```
-
-If you have updated colors for theme-ui, please consider using your own manifest instead of the theme provided one.
-
-## Site setup
-
-├── author -> **Required directory**
-│   └── john-doe.yml
-├── content
-│   ├── assets -> *Default assets directory*: Can be updated in optins
-│   │   ├── profile.png
-│   │   └── profile.svg
-│   └── home -> *Default home directory*: Can be updated in optins
-│       └── index.mdx
-├── gatsby-config.js
-├── package-lock.json
-├── package.json
-└── src
-    ├── gatsby-theme-simple-bio -> *Component shadowing*
-    │   ├── components
-    │   │   └── bio
-    │   │       └── figure.js
-    │   └── gatsby-plugin-theme-ui -> *Overriding theme-ui config*
-    │       ├── colors.js
-    │       └── index.js
-    └── pages
-        └── 404.js -> **Required to render HTTP 404 requests**
-
-## Features
-
-- Optional addition of Manifest
-  - Uses default icon
-  - Use base path: "/"
-  - If any of them needs to change, use your own manifest
-- PWA support
+  - Start the starter site.
+  ```sh
+  gatsby develop
+  ```
