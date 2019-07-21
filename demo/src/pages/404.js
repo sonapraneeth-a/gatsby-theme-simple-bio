@@ -13,7 +13,7 @@ class NotFound extends React.Component {
    */
   render() {
     const description =
-      "This page is displayed when location " + "requested is not available";
+      "This page is displayed when location requested is not available";
     return (
       <PageLayout title="404 - Page not found" description={description}>
         <p>
