@@ -20,9 +20,6 @@ module.exports = (themeOptions) => {
   console.log(
     `Theme options from gatsby-config: ${JSON.stringify(options, null, 2)}`,
   );
-  /* let serviceWorkerUrl = options.baseUrl;
-  serviceWorkerUrl = serviceWorkerUrl.replace(/\/?$/, "/");
-  console.log(`Service worker URL: ${serviceWorkerUrl}`);*/
 
   return {
     // Default siteMetadata
