@@ -1,26 +1,4 @@
-<p align="center">
-  <a href="https://gatsbyjs.org">
-    <img alt="Gatsby" src="https://sonapraneeth-a.github.io/gatsby-theme-simple-bio/icons/icon-512x512.png" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby Theme - Simple Bio
-</h1>
-
-<p align="center">
-  <a href="https://github.com/sonapraneeth-a/gatsby-theme-simple-bio/blob/master/gatsby-theme-simple-bio/LICENSE">
-    <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="Gatsby theme simple bio is released under the MIT license." />
-  </a>
-  <a href="https://www.npmjs.org/package/gatsby-theme-simple-bio">
-    <img src="https://img.shields.io/npm/v/gatsby-theme-simple-bio.svg" alt="Current npm package version." />
-  </a>
-  <a href="https://npmcharts.com/compare/gatsby-theme-simple-bio?minimal=true">
-    <img src="https://img.shields.io/npm/dm/gatsby-theme-simple-bio.svg" alt="Downloads per month on npm." />
-  </a>
-  <a href="https://npmcharts.com/compare/gatsby-theme-simple-bio?minimal=true">
-    <img src="https://img.shields.io/npm/dt/gatsby-theme-simple-bio.svg" alt="Total downloads on npm." />
-  </a>
-</p>
+# Gatsby Theme - Simple Bio
 
 ## Description
 
