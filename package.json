@@ -19,7 +19,8 @@
   },
   "workspaces": [
     "gatsby-theme-simple-bio",
-    "demo"
+    "demo",
+    "starter"
   ],
   "devDependencies": {
     "lerna": "^3.16.0"
