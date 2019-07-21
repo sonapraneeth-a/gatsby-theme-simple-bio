@@ -17,7 +17,7 @@ module.exports = {
     {
       resolve: "gatsby-theme-simple-bio",
       options: {
-        basePath: "/gatsby-theme-simple-bio",
+        baseUrl: "/",
         rounded: false,
         paths: {
           assets: "content/assets",
