@@ -1,8 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
 import PropTypes from "prop-types";
-/** @jsx jsx */
-import {jsx} from "@emotion/core";
 
 import profileImage from "../../../../content/assets/profile.svg";
 import {useOptions} from "gatsby-theme-simple-bio/src/hooks/useOptions";
@@ -30,13 +28,8 @@ function FigureBio({image, caption}) {
         src={profileImage}
         alt={"This is how John Doe looks"}
         style={{
-          borderRadius: borderRadius,
-          // border: "0.1rem solid black",
+          borderRadius: `${borderRadius}`,
         }}
-        imgStyle={{
-          borderRadius: `${borderRadius} !important`,
-        }}
-        caption={caption}
       />
     </>
   );
