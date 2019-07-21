@@ -17,9 +17,6 @@ module.exports = (themeOptions) => {
   };
   // Options created using default and provided options
   const options = merge({}, defaultOptions, themeOptions);
-  console.log(
-    `Theme options from gatsby-config: ${JSON.stringify(options, null, 2)}`,
-  );
 
   return {
     // Default siteMetadata
