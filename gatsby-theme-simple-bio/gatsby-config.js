@@ -20,9 +20,9 @@ module.exports = (themeOptions) => {
   console.log(
     `Theme options from gatsby-config: ${JSON.stringify(options, null, 2)}`,
   );
-  let serviceWorkerUrl = options.baseUrl;
+  /* let serviceWorkerUrl = options.baseUrl;
   serviceWorkerUrl = serviceWorkerUrl.replace(/\/?$/, "/");
-  console.log(`Service worker URL: ${serviceWorkerUrl}`);
+  console.log(`Service worker URL: ${serviceWorkerUrl}`);*/
 
   return {
     // Default siteMetadata
@@ -89,7 +89,7 @@ module.exports = (themeOptions) => {
       "gatsby-transformer-yaml",
       "gatsby-plugin-sharp",
       "gatsby-transformer-sharp",
-      {
+      /* {
         resolve: "gatsby-plugin-manifest",
         options: {
           name: "gatsby-theme-simple-bio",
@@ -105,7 +105,7 @@ module.exports = (themeOptions) => {
       // this (optional) plugin enables Progressive Web App
       // + Offline functionality
       // To learn more, visit: https://gatsby.dev/offline
-      "gatsby-plugin-offline",
+      "gatsby-plugin-offline",*/
       "gatsby-plugin-theme-ui",
     ],
   };
