@@ -7,7 +7,7 @@
 - [ ] Add font awesome icon to page layout (currently not working as expected)
 - [ ] Options
   - [x] rounded: Make the profile image rounded
-  - [ ] debug: Add debugging statements
+  - [x] debug: Add debugging statements
 - [ ] Add support for Theme UI
   - [-] borderBottomColor for <a> (https://github.com/system-ui/theme-ui/issues/{75/81})
   - [x] Colors for social icons in dark and light modes
