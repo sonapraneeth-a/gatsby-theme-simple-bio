@@ -21,8 +21,8 @@
     "deploy": "gh-pages -d public"
   },
   "dependencies": {
-    "gatsby": "^2.13.32",
-    "gatsby-plugin-manifest": "^2.2.3",
+    "gatsby": "^2.13.34",
+    "gatsby-plugin-manifest": "^2.2.4",
     "gatsby-plugin-offline": "^2.2.4",
     "gatsby-theme-simple-bio": "^0.2.0",
     "react": "^16.8.6",
@@ -34,7 +34,7 @@
     "eslint": "^6.1.0",
     "eslint-config-google": "^0.13.0",
     "eslint-loader": "^2.2.1",
-    "eslint-plugin-react": "^7.14.2",
+    "eslint-plugin-react": "^7.14.3",
     "gatsby-plugin-eslint": "^2.0.5",
     "husky": "^3.0.1",
     "lint-staged": "^9.2.0",
