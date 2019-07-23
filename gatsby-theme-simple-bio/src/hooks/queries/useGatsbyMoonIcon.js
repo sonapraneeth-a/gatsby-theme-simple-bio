@@ -1,5 +1,7 @@
 import {useStaticQuery, graphql} from "gatsby";
 
+// Hook for retrieving moon icon image using ImageSharp for React switch
+// Moon image is used for dark mode
 export const useGatsbyMoonIcon = () => {
   {
     /* Reference: https://www.gatsbyjs.org/docs/use-static-query/ */

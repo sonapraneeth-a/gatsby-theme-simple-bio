@@ -1,5 +1,7 @@
 import {useStaticQuery, graphql} from "gatsby";
 
+// Hook for retrieving sun icon image using ImageSharp for React switch
+// Sun image is used for light mode
 export const useGatsbySunIcon = () => {
   {
     /* Reference: https://www.gatsbyjs.org/docs/use-static-query/ */

@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-// import {css} from "@emotion/core";
 
 import PageLayout from "../layouts/page";
 import {screens, from} from "../components/breakpoints";
@@ -21,40 +20,29 @@ HomeLayout.propTypes = {
 HomeLayout.defaultProps = {};
 
 /**
- * Home layout
- * @return {JSX} Rendered children for the Home
+ * Home layout - Used in home page
+ * @return {JSX} Rendered children for the HomeLayout
  */
 function HomeLayout({location}) {
   {
     /* Run the hook queries */
   }
+  // Get the meta information from mdx file
   const homePage = useMdxHomePage();
+  // Get author information from the yaml
   const author = useYamlAuthor();
+  // Get author positions from the yaml
   const positions = useYamlAuthorPositions();
   {
     /* Retrieve information from the query results */
   }
   const title = homePage.frontmatter.title || "Home page";
   const description = homePage.frontmatter.summary || "Home page";
+  // Profile image to be displayed on home page
   const image = author.cover.childImageSharp;
   return (
     <PageLayout title={title} description={description} location={location}>
       <Grid noCols={2} nSizes={[40, 60]}>
-        {/* <GridItem
-          id="figureBio"
-          style={{
-            margin: "0 10%",
-            display: "flex",
-            flexDirection: "column",
-            position: "sticky",
-            top: "15vh",
-            alignSelf: "flex-start",
-            [mobile]: {
-              width: "90%",
-              placeSelf: "center stretch",
-            },
-          }}
-        >*/}
         <GridItem
           id="figureBio"
           css={{
@@ -81,7 +69,6 @@ function HomeLayout({location}) {
             <PositionBio positions={positions} />
           )}
         </GridItem>
-        {/* <GridItem id="descriptionBio" style={{padding: "1rem"}}>*/}
         <GridItem id="descriptionBio" css={{padding: "0 1rem 1rem 1rem"}}>
           <DescriptionBio description={homePage.body} />
         </GridItem>

@@ -8,6 +8,9 @@ DescriptionBio.propTypes = {};
 DescriptionBio.defaultProps = {};
 
 /**
+ * This component renders description of the person
+ * from the mdx file present in the home content
+ * (See options: paths.home) folder
  * @return {JSX}
  */
 function DescriptionBio() {

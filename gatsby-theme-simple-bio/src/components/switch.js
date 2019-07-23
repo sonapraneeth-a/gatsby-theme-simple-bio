@@ -2,6 +2,7 @@ import React from "react";
 import ReactSwitch from "react-switch";
 
 /**
+ * Switch for toggling between light and dark themes
  * @param {object} props
  * @return {JSX}
  */

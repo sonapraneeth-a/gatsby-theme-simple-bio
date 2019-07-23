@@ -3,10 +3,15 @@ import PropTypes from "prop-types";
 import Image from "gatsby-image";
 
 GatsbyImage.propTypes = {
+  // Image source
   src: PropTypes.object.isRequired,
+  // Optional: Alt string for the image
   alt: PropTypes.string,
+  // Optional: Caption for the image
   caption: PropTypes.any,
+  // Optional: Styling for the image wrapper
   style: PropTypes.any,
+  // Optional: Styling for the img element
   imgStyle: PropTypes.any,
 };
 
@@ -16,19 +21,20 @@ GatsbyImage.defaultProps = {
 };
 
 /**
+ * Wrapper for Image component from gatsby
  * @param {object} props
- * @return {JSX}
+ * @return {JSX} <GatsbyImage> component
  */
-function GatsbyImage(props) {
+function GatsbyImage({src, alt, style, imgStyle, caption}) {
   return (
     <>
       <Image
-        fluid={props.src}
-        alt={props.alt}
-        style={props.style}
-        imgStyle={props.imgStyle}
+        fluid={src}
+        alt={alt}
+        style={style}
+        imgStyle={imgStyle}
       />
-      {props.caption}
+      {caption}
     </>
   );
 }

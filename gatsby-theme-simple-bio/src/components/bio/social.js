@@ -8,11 +8,10 @@ import {fab} from "@fortawesome/free-brands-svg-icons";
 import {
   faCheckSquare,
   faCoffee,
-  faRss,
 } from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
-library.add(fab, faCheckSquare, faCoffee, faRss);
+library.add(fab, faCheckSquare, faCoffee);
 
 SocialBio.propTypes = {
   linkedin: PropTypes.string,
@@ -91,21 +90,6 @@ function SocialBio({linkedin, github, twitter}) {
           />
         </a>
       )}
-      {/* <a
-        href={"/feed.xml"}
-        target="_blank"
-        rel="noopener noreferrer"
-        style={{borderBottom: "none"}}
-        aria-label={"RSS Feed"}
-      >
-        <FontAwesomeIcon
-          icon={["fa", "rss"]}
-          size={"lg"}
-          sx={{
-              color: "rss",
-            }}
-        />
-      </a>*/}
     </p>
   );
 }

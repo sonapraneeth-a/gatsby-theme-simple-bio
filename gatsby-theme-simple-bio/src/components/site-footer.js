@@ -21,6 +21,7 @@ import {useThemeVersion} from "../hooks/queries/useThemeVersion";
 // import Image from "gatsby-image";
 
 /**
+ * Footer for the site which will be present in all sites
  * @return {JSX}
  */
 function SiteFooter() {

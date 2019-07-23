@@ -14,6 +14,7 @@ PositionBio.propTypes = {
 PositionBio.defaultProps = {};
 
 /**
+ * Component for displaying list of positions
  * @return {JSX}
  */
 function PositionBio({positions}) {

@@ -12,7 +12,7 @@ library.add(faHome);
 import BaseLayout from "./base";
 
 /**
- * Page layout
+ * Page layout for pages
  * @return {JSX} Rendered children for the page
  */
 function PageLayout({title, description, location, children}) {

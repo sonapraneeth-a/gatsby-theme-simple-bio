@@ -1,5 +1,6 @@
 import {useStaticQuery, graphql} from "gatsby";
 
+// Hook for retrieving last build time for gatsby site
 export const useSiteBuildTime = () => {
   {
     /* Reference: https://www.gatsbyjs.org/docs/use-static-query/ */

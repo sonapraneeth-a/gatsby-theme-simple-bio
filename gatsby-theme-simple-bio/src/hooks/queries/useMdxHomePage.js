@@ -1,5 +1,6 @@
 import {useStaticQuery, graphql} from "gatsby";
 
+// Hook for retrieving content for DescriptionBio
 export const useMdxHomePage = () => {
   {
     /* Reference: https://www.gatsbyjs.org/docs/use-static-query/ */

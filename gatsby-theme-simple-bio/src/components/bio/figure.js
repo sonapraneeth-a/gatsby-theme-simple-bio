@@ -8,6 +8,7 @@ import GatsbyImage from "../gatsby-image";
 import {useOptions} from "../../hooks/useOptions";
 
 FigureBio.propTypes = {
+  // Profile image of the person
   image: PropTypes.any.isRequired,
   caption: PropTypes.any,
 };
@@ -21,16 +22,15 @@ FigureBio.defaultProps = {
  * @return {JSX}
  */
 function FigureBio({image, caption}) {
+  // Extract options passed to themes
   const options = useOptions();
   const borderRadius = options.rounded === false ? "0%" : "50%";
   return (
     <>
-      {/* TODO: Fix this for rounded option */}
       <GatsbyImage
         src={image.fluid}
         style={{
           borderRadius: borderRadius,
-          // border: "0.1rem solid black",
         }}
         imgStyle={{
           borderRadius: `${borderRadius} !important`,

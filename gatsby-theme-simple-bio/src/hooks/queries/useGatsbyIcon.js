@@ -1,5 +1,6 @@
 import {useStaticQuery, graphql} from "gatsby";
 
+// Hook for retrieving gatsby icon image using ImageSharp
 export const useGatsbyIconImage = () => {
   {
     /* Reference: https://www.gatsbyjs.org/docs/use-static-query/ */

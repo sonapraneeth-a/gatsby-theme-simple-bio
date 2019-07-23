@@ -76,13 +76,14 @@ const uncheckedIcon = (
 );*/}
 
 /**
- * Page layout
+ * Root layout -> Will be applied to all pages
  * @return {JSX} Rendered children for the page
  */
 function Root({children}) {
   /* const sun = useGatsbySunIcon();
   const moon = useGatsbyMoonIcon();*/
   const options = useOptions();
+  // Get the theme from color mode hook
   const [colorMode, setColorMode] = useColorMode();
   let themeToUse = colorMode;
   if (typeof window !== "undefined") {
@@ -93,6 +94,7 @@ function Root({children}) {
     } else {
       themeToUse = localStorage.getItem("theme");
     }
+    // If environment is development, attach debug package
     if (process.env.NODE_ENV === "development") {
       // To enable debugging information in browser
       localStorage.setItem("debug", "gatsby-theme-simple-bio:*");
