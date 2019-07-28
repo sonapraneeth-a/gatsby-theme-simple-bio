@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "gatsby": "^2.13.32",
-    "gatsby-plugin-manifest": "^2.2.4",
+    "gatsby-plugin-manifest": "^2.2.3",
     "gatsby-plugin-offline": "^2.2.4",
     "gatsby-theme-simple-bio": "^0.2.1",
     "react": "^16.8.6",
