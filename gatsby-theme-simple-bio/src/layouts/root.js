@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "@emotion/styled";
-import {useColorMode, css} from "theme-ui";
+import {useColorMode, css, useThemeUI} from "theme-ui";
 import {Global} from "@emotion/core";
 // import Image from "gatsby-image";
 
@@ -85,6 +85,9 @@ function Root({children}) {
   const options = useOptions();
   // Get the theme from color mode hook
   const [colorMode, setColorMode] = useColorMode();
+  const context = useThemeUI();
+  layout(`Initial color mode: ${colorMode}`);
+  layout(JSON.stringify(context.theme, null, 2));
   let themeToUse = colorMode;
   if (typeof window !== "undefined") {
     // Get theme value from localStorage
@@ -110,6 +113,7 @@ function Root({children}) {
   };
   const switchColor = "rgb(188, 188, 188)";
   layout(`Options: ${JSON.stringify(options, null, 2)}`);
+  layout(`isDarkTheme: ${isDarkTheme}`);
   return (
     <>
       <Global

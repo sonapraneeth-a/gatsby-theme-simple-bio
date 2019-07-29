@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "@emotion/styled";
 
+import Root from "./root";
 import HeadMetadata from "../components/head/meta";
 import Container from "../components/grid/container";
 import Navbar from "../components/navbar";
@@ -31,7 +32,7 @@ const MainContent = styled.main`
  */
 function BaseLayout({title, description, location, children}) {
   return (
-    <>
+    <Root>
       <HeadMetadata
         title={title}
         description={description}
@@ -45,7 +46,7 @@ function BaseLayout({title, description, location, children}) {
         </MainContent>
         <SiteFooter />
       </Content>
-    </>
+    </Root>
   );
 }
 
