@@ -24,10 +24,8 @@ module.exports = {
       options: {
         baseUrl: baseUrl,
         rounded: false,
-        paths: {
-          assets: "content/assets",
-          home: "content/home",
-        },
+        assetsPath: "content/assets",
+        homePath: "content/home",
       },
     },
     {

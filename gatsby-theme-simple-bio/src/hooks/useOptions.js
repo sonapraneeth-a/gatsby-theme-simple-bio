@@ -1,5 +1,22 @@
-import React from "react";
-import {OptionsContext} from "../themes/options";
+import {useStaticQuery, graphql} from "gatsby";
 
-// React hooks for using options provided in theme
-export const useOptions = () => React.useContext(OptionsContext);
+// Hook for retrieving last build time for gatsby site
+export const useOptions = () => {
+  {
+    /* Reference: https://www.gatsbyjs.org/docs/use-static-query/ */
+  }
+  const info = useStaticQuery(
+    graphql`
+      query Options {
+        config(id: {eq: "gatsby-theme-simple-bio"}) {
+          baseUrl
+          rounded
+          homePath
+          assetsPath
+          id
+        }
+      }
+    `,
+  );
+  return info.config;
+};

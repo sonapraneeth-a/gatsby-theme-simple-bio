@@ -4,14 +4,12 @@ const crypto = require("crypto");
 
 // Default options to be used in theme
 const defaultOptions = {
+  // Base url for rendering site
   baseUrl: "/", // Default: "/"
-  // Paths for folders
-  paths: {
-    // Directory path for images
-    assets: "content/assets", // Default: "content/assets"
-    // Directory path for MDX home page content
-    home: "content/home", // Default: "content/home"
-  },
+  // Directory path for images
+  assetsPath: "content/assets", // Default: "content/assets"
+  // Directory path for MDX home page content
+  homePath: "content/home", // Default: "content/home"
   // Should the theme have rounded components
   rounded: false, // Default: false
 };
@@ -28,8 +26,8 @@ exports.onPreBootstrap = ({reporter}, themeOptions) => {
   options = merge({}, defaultOptions, themeOptions);
   reporter.info(`Options: ${JSON.stringify(options, null, 2)}`);
   baseUrl = options.baseUrl;
-  assetsPath = options.paths.assets;
-  homePath = options.paths.home;
+  assetsPath = options.assetsPath;
+  homePath = options.homePath;
   rounded = options.rounded;
 
   const directories = [assetsPath, homePath];
@@ -61,7 +59,7 @@ exports.sourceNodes = (
   {actions: {createTypes, createNode}, schema},
 ) => {
   // Create the Garden type to solidify the field data types
-  createTypes(`type SimpleBioConfig implements Node {
+  createTypes(`type Config implements Node {
     baseUrl: String!
     assetsPath: String!,
     homePath: String!,
@@ -78,11 +76,11 @@ exports.sourceNodes = (
 
   createNode({
     ...simpleBioConfig,
-    id: "gatsby-theme-simple-bio-config",
+    id: "gatsby-theme-simple-bio",
     parent: null,
     children: [],
     internal: {
-      type: "SimpleBioConfig",
+      type: "Config",
       contentDigest: crypto
         .createHash("md5")
         .update(JSON.stringify(simpleBioConfig))

@@ -105,17 +105,22 @@ username:
 Below are the options available for the theme
 
 ```js
+// Base url for rendering site
 baseUrl: "/", // Default: "/"
-// Paths for folders
-paths: {
-  // Directory path for images
-  assets: "content/assets", // Default: "content/assets"
-  // Directory path for MDX home page content
-  home: "content/home", // Default: "content/home"
-},
+// Directory path for images
+assetsPath: "content/assets", // Default: "content/assets"
+// Directory path for MDX home page content
+homePath: "content/home", // Default: "content/home"
 // Should the theme have rounded components
 rounded: false, // Default: false
 ```
+
+| **Key**          | **Default**          | **Description**                          |
+|------------------|----------------------|------------------------------------------|
+| ```baseUrl```    | ```/```              | Base url for rendering site              |
+| ```assetsPath``` | ```content/assets``` | Directory path for images                |
+| ```homePath```   | ```content/home```   | Directory path for MDX home page content |
+| ```rounded```    | ```false```          | Should the theme have rounded components |
 
 ### Additional configuration
 

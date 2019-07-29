@@ -4,14 +4,12 @@ module.exports = (themeOptions) => {
   console.log(`Environment: ${process.env.NODE_ENV}`);
   // Default options to be used in theme
   const defaultOptions = {
+    // Base url for rendering site
     baseUrl: "/", // Default: "/"
-    // Paths for folders
-    paths: {
-      // Directory path for images
-      assets: "content/assets", // Default: "content/assets"
-      // Directory path for MDX home page content
-      home: "content/home", // Default: "content/home"
-    },
+    // Directory path for images
+    assetsPath: "content/assets", // Default: "content/assets"
+    // Directory path for MDX home page content
+    homePath: "content/home", // Default: "content/home"
     // Should the theme have rounded components
     rounded: false, // Default: false
   };
@@ -61,7 +59,7 @@ module.exports = (themeOptions) => {
         resolve: "gatsby-source-filesystem",
         options: {
           name: "theme-assets",
-          path: options.paths.assets,
+          path: options.assetsPath,
         },
       },
       {
@@ -75,7 +73,7 @@ module.exports = (themeOptions) => {
         resolve: "gatsby-source-filesystem",
         options: {
           name: "home",
-          path: `${options.paths.home}`,
+          path: options.homePath,
         },
       },
       "gatsby-plugin-mdx",
