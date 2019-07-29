@@ -13,7 +13,7 @@
   - [x] Colors for social icons in dark and light modes
   - [ ] Use built-in theme layouts (Layout, Flex, ...)
   - [-] Test if breakpoints are working with theme-ui
-  - [ ] Updated meta theme_color
+  - [x] Updated meta theme_color
   - [ ] Theme styling migration
     - [ ] Grid
     - [ ] Gatsby image

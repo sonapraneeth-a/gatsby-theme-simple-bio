@@ -36,17 +36,7 @@ HeadMeta.defaultProps = {
 function HeadMeta({lang, title, description, author, keywords}) {
   const siteMeta = useSiteMetadata();
   const context = useThemeUI();
-  const {theme, colorMode} = context;
-  /* console.log(`Meta theme: ${JSON.stringify(theme, null, 2)}`);
-  console.log(`Meta color mode: ${colorMode}`);
-  console.log(`Meta theme primary: ${theme.colors.primary}`);*/
-  let primary = "";
-  if (colorMode === "light") {
-    primary = theme.colors.primary;
-  } else if (colorMode === "dark") {
-    primary = theme.colors.modes.dark.primary;
-  }
-  // console.log(`Meta primary: ${primary}`);
+  const {colors} = context.theme;
   const metaInfo = {
     title: title === (undefined || null || "") ? siteMeta.title : title,
     author:
@@ -68,7 +58,7 @@ function HeadMeta({lang, title, description, author, keywords}) {
           {name: "keywords", content: metaInfo.keywords},
           {name: "generator", content: "Gatsby site generator"},
           {name: "application-name", content: siteMeta.appName},
-          {name: "theme-color", content: primary},
+          {name: "theme-color", content: colors.primary},
         ]}
       />
     </>
