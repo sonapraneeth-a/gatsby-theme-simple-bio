@@ -1,5 +1,6 @@
 const fs = require("fs");
 const merge = require("lodash.merge");
+const crypto = require("crypto");
 
 // Default options to be used in theme
 const defaultOptions = {
@@ -17,8 +18,9 @@ const defaultOptions = {
 
 let options;
 let baseUrl;
-let assetsDirPath;
-let homeDirPath;
+let assetsPath;
+let homePath;
+let rounded;
 
 // 1. Make sure the necessary directories exist
 exports.onPreBootstrap = ({reporter}, themeOptions) => {
@@ -26,10 +28,11 @@ exports.onPreBootstrap = ({reporter}, themeOptions) => {
   options = merge({}, defaultOptions, themeOptions);
   reporter.info(`Options: ${JSON.stringify(options, null, 2)}`);
   baseUrl = options.baseUrl;
-  assetsDirPath = options.paths.assets;
-  homeDirPath = options.paths.home;
+  assetsPath = options.paths.assets;
+  homePath = options.paths.home;
+  rounded = options.rounded;
 
-  const directories = [assetsDirPath, homeDirPath];
+  const directories = [assetsPath, homePath];
 
   directories.map((directoryPath) => {
     reporter.info(`Looking for ${directoryPath} directory`);
@@ -50,5 +53,42 @@ exports.createPages = async ({actions, graphql, reporter}, themeOptions) => {
   actions.createPage({
     path: baseUrl,
     component: require.resolve("./src/templates/home.js"),
+  });
+};
+
+// 5. Creating source nodes for options
+exports.sourceNodes = (
+  {actions: {createTypes, createNode}, schema},
+) => {
+  // Create the Garden type to solidify the field data types
+  createTypes(`type SimpleBioConfig implements Node {
+    baseUrl: String!
+    assetsPath: String!,
+    homePath: String!,
+    rounded: Boolean!
+    }`);
+
+  // create data from plugin config
+  const simpleBioConfig = {
+    baseUrl,
+    assetsPath,
+    homePath,
+    rounded,
+  };
+
+  createNode({
+    ...simpleBioConfig,
+    id: "gatsby-theme-simple-bio-config",
+    parent: null,
+    children: [],
+    internal: {
+      type: "SimpleBioConfig",
+      contentDigest: crypto
+        .createHash("md5")
+        .update(JSON.stringify(simpleBioConfig))
+        .digest("hex"),
+      content: JSON.stringify(simpleBioConfig),
+      description: "Simple Bio Config",
+    },
   });
 };
