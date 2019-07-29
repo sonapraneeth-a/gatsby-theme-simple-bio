@@ -86,29 +86,18 @@ function Root({children}) {
   // Get the theme from color mode hook
   const [colorMode, setColorMode] = useColorMode();
   const context = useThemeUI();
-  layout(`Initial color mode: ${colorMode}`);
-  layout(JSON.stringify(context.theme, null, 2));
-  let themeToUse = colorMode;
+  layout(`colorMode: ${colorMode}`);
+  layout(`From theme: ${context.theme.initialColorMode}`);
   if (typeof window !== "undefined") {
-    // Get theme value from localStorage
-    if (localStorage.getItem("dark") === null) {
-      localStorage.setItem("dark", themeToUse === "dark");
-      localStorage.setItem("theme", themeToUse);
-    } else {
-      themeToUse = localStorage.getItem("theme");
-    }
     // If environment is development, attach debug package
     if (process.env.NODE_ENV === "development") {
       // To enable debugging information in browser
       localStorage.setItem("debug", "gatsby-theme-simple-bio:*");
     }
   }
-  // setColorMode(themeToUse);
-  const isDarkTheme = themeToUse === "dark";
+  const isDarkTheme = colorMode === "dark";
   const toggleTheme = (e) => {
     const updatedTheme = (isDarkTheme ? "light" : "dark");
-    localStorage.setItem("dark", updatedTheme === "dark");
-    localStorage.setItem("theme", updatedTheme);
     setColorMode(updatedTheme);
   };
   const switchColor = "rgb(188, 188, 188)";
