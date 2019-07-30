@@ -1,7 +1,5 @@
 # Gatsby Theme - Simple Bio
 
-## Description
-
 This theme is developed using ```gatsby```. One can use this theme for having a website with brief introduction and social profiles.
 
 See the [live demo](https://gatsby-theme-simple-bio-demo.netlify.com/).
@@ -89,7 +87,7 @@ positions:
 
 - The image provided in ```cover``` entry of yml is expected to be an image file (other than SVGs) which is locally present (Currently online image links are not supported)
 
-**NOTE:** This image should be present in the directory specified by ```paths.assets``` in theme options.
+**NOTE:** This image should be present in the directory specified by ```assetsPath``` in theme options.
 
 - If you don't wish to provide any usernames, make the entry an empty string as below
 
@@ -98,7 +96,7 @@ username:
   github: ""
 ```
 
-- Description of the person should be provided in the folder specified in ```paths.home``` option of the theme. The MDX file present in this folder should have type ```"home-page"``` in the front matter.
+- Description of the person should be provided in the folder specified in ```homePath``` option of the theme. The MDX file present in this folder should have type ```"home-page"``` in the front matter.
 
 ### Theme Options
 
