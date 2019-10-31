@@ -72,5 +72,8 @@
     "theme-ui": "^0.2.23",
     "typeface-pt-sans": "^0.0.72",
     "typeface-signika-negative": "^0.0.71"
+  },
+  "publishConfig": { 
+    "registry": "https://npm.pkg.github.com/" 
   }
 }
